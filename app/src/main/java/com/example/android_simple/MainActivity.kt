@@ -1,5 +1,6 @@
 package com.example.android_simple
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
@@ -17,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         image1.setOnClickListener { // 아이디 클릭
             Toast.makeText(this, "1번 클릭 완료", Toast.LENGTH_LONG) // 토스트 (작은 팝업) 띄우기
                 .show()
+
+            // 다음화면 이동
+            val intent = Intent(this, Bts1Activity::class.java)
+
+            startActivity(intent)
         }
         
     }
